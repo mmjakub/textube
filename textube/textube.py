@@ -1,4 +1,4 @@
-#!/usr/bin/env python3.9
+#!/usr/bin/env python3
 
 import argparse
 import concurrent.futures as cofu
@@ -6,10 +6,10 @@ import logging
 import pathlib
 import sys
 
-import ytapi
+from . import ytapi
 
-if __name__ == "__main__":
-    parser = argparse.ArgumentParser(
+def main():
+    parser = argparse.ArgumentParser(prog='textube',
         description='Download subtitles for a youtube channel/playlist')
 
     parser.add_argument('-v', '--verbose', action='store_true')

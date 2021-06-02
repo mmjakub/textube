@@ -1,5 +1,3 @@
-#!/usr/bin/env python3.9
-
 import base64
 import html
 from http.client import HTTPSConnection

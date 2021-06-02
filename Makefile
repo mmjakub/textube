@@ -1,9 +1,9 @@
-src = textube.py ytapi.py test/test_ytapi.py
+src = textube/textube.py textube/ytapi.py tests/test_ytapi.py
 
 all: check
 
 test:
-	python -m unittest -v test.test_ytapi
+	python -m unittest tests.test_ytapi
 
 init:
 	python -m pip install -r requirements.txt
@@ -16,3 +16,5 @@ shell: .venv
 
 gvim:
 	gvim -o $(src)
+
+.PHONY: all test init check shell gvim
