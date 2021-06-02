@@ -2,12 +2,12 @@
 
 import unittest
 
-import textube
+from .context import ytapi
 
-class TestPytsub(unittest.TestCase):
+class TestYTApi(unittest.TestCase):
 
     def test_subs(self):
-        subs = textube.get_captions_from_config('2Ze22BNftAA')
+        subs = ytapi.get_captions_from_config('2Ze22BNftAA')
         self.assertIsNotNone(subs)
         self.assertEqual(len(subs), 21725)
 

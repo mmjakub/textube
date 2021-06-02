@@ -1,13 +1,9 @@
-main = textube
-src = $(main).py test_$(main).py
+src = textube.py ytapi.py test/test_ytapi.py
 
 all: check
 
-test: test_$(main).py
-	python -m unittest -v test_$(main)
-
-test.%:
-	python -m unittest -v test_$(main).$*
+test:
+	python -m unittest -v test.test_ytapi
 
 init:
 	python -m pip install -r requirements.txt
